@@ -1,8 +1,9 @@
 from voteapp import app
+from flask import render_template
 
 @app.route('/')
 def main_page():
-	return "Main Page"
+	return render_template('index.html')
 
 @app.route('/vote')
 def vote():

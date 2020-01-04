@@ -1,0 +1,2 @@
+from voteapp import app
+
