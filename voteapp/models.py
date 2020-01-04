@@ -7,7 +7,7 @@ class Submission(db.Model):
 	project_id=db.Column(db.Integer,primary_key=True)
 	authors = db.relationship('Contributor',backref="submission",lazy='dynamic')
 	def __repr__(self):
-		return project_title  
+		return self.project_title  
 class Contributor(db.Model):
 	first_name=db.Column(db.String(64))
 	last_name=db.Column(db.String(64))

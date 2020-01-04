@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block title %}Results{% endblock %}
+{% block body %}
+	<h1>Results</h1>
+	<ol>
+		{% for submission in context %}
+			<li>{{ submission }}</li>
+		{% endfor %}
+	</ol>
+{% endblock %}

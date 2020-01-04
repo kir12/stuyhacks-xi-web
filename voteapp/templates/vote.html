@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block title %}Vote{% endblock %}
+{% block body %}
+	{% if context is undefined %}
+		<p>{{result['result']}}</p>
+	{% else %}
+	<form method="POST">
+		{% for submission in context %}
+			<input type="radio" name="submission" value="{{submission.project_id}}"> {{ submission }}<br>
+		{% endfor %}
+		<input type="submit" value="Submit">
+	</form>
+	{% endif %}
+{% endblock %}
